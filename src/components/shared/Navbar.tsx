@@ -70,6 +70,7 @@ const Navbar: React.FC = () => {
                         key={childItem.id}
                         to={childItem.link}
                         className="dropdown-item"
+                        onClick={() => setIsNavOpen(false)}
                       >
                         {childItem.label}
                       </NavLink>
@@ -81,6 +82,7 @@ const Navbar: React.FC = () => {
                   key={menuItem.id}
                   to={menuItem.link || "/"}
                   className="nav-item nav-link"
+                  onClick={() => setIsNavOpen(false)}
                 >
                   {menuItem.label}
                 </NavLink>
