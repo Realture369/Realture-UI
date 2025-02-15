@@ -1,0 +1,81 @@
+import propertyOneImg from "../img/property-1.jpg";
+import propertyTwoImg from "../img/property-2.jpg";
+import propertyThreeImg from "../img/property-3.jpg";
+import propertyFourImg from "../img/property-4.jpg";
+import propertyFiveImg from "../img/property-5.jpg";
+import propertySixImg from "../img/property-6.jpg";
+
+export const PROPERTIES = [
+  {
+    id: 1,
+    img: propertyOneImg,
+    name: "Luxury Villa",
+    type: "Villa",
+    isForSale: true,
+    price: "$1,200,000",
+    location: "Beverly Hills, CA",
+    size: "4500 sqft",
+    bedrooms: 5,
+    bathrooms: 4,
+  },
+  {
+    id: 2,
+    img: propertyTwoImg,
+    name: "Modern Apartment",
+    type: "Apartment",
+    isForSale: false,
+    price: "$3,500/month",
+    location: "New York, NY",
+    size: "1200 sqft",
+    bedrooms: 2,
+    bathrooms: 2,
+  },
+  {
+    id: 3,
+    img: propertyThreeImg,
+    name: "Cozy Cottage",
+    type: "Cottage",
+    isForSale: true,
+    price: "$450,000",
+    location: "Asheville, NC",
+    size: "1800 sqft",
+    bedrooms: 3,
+    bathrooms: 2,
+  },
+  {
+    id: 4,
+    img: propertyFourImg,
+    name: "Downtown Loft",
+    type: "Loft",
+    isForSale: false,
+    price: "$2,800/month",
+    location: "Chicago, IL",
+    size: "1000 sqft",
+    bedrooms: 1,
+    bathrooms: 1,
+  },
+  {
+    id: 5,
+    img: propertyFiveImg,
+    name: "Beachfront Bungalow",
+    type: "Bungalow",
+    isForSale: true,
+    price: "$750,000",
+    location: "Malibu, CA",
+    size: "2200 sqft",
+    bedrooms: 3,
+    bathrooms: 2,
+  },
+  {
+    id: 6,
+    img: propertySixImg,
+    name: "Suburban Family Home",
+    type: "House",
+    isForSale: true,
+    price: "$600,000",
+    location: "Austin, TX",
+    size: "2800 sqft",
+    bedrooms: 4,
+    bathrooms: 3,
+  },
+];
