@@ -16,17 +16,17 @@ export const MENU = [
       {
         id: "p1",
         label: "Property List",
-        Link: "/property-list",
+        link: "/property-list",
       },
       {
         id: "p2",
         label: "Property Type",
-        Link: "/property-type",
+        link: "/property-type",
       },
       {
         id: "p3",
         label: "Property Agent",
-        Link: "/property-agent",
+        link: "/property-agent",
       },
     ],
   },

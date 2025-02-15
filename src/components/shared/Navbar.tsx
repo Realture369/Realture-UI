@@ -1,10 +1,26 @@
+import { useState } from "react";
 import { MENU } from "../../data/menu";
 import iconDealImg from "../../img/icon-deal.png";
 import { Link, NavLink } from "react-router-dom";
 import useSticyNavbar from "../../hooks/useSticyNavbar";
 
-const Navbar = () => {
+const Navbar: React.FC = () => {
   useSticyNavbar();
+
+  // State to manage navbar collapse
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  // State to track open dropdowns
+  const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+
+  // Toggle the mobile navbar
+  const toggleNavbar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  // Toggle dropdown menus
+  const toggleDropdown = (id: number) => {
+    setOpenDropdown(openDropdown === id ? null : id);
+  };
 
   return (
     <div className="container-fluid nav-bar bg-transparent">
@@ -23,41 +39,44 @@ const Navbar = () => {
           </div>
           <h1 className="m-0 text-primary">Realture</h1>
         </Link>
-        <button
-          type="button"
-          className="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-        >
+
+        {/* Navbar Toggle Button (for mobile) */}
+        <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarCollapse">
+
+        {/* Navbar Menu */}
+        <div
+          className={`collapse navbar-collapse ${isNavOpen ? "show" : ""}`}
+          id="navbarCollapse"
+        >
           <div className="navbar-nav ms-auto">
-            {MENU.map((menuItem) => {
-              if (menuItem.children && menuItem.children.length > 0) {
-                return (
-                  <div key={menuItem.id} className="nav-item dropdown">
-                    <a
-                      className="nav-link dropdown-toggle"
-                      data-bs-toggle="dropdown"
-                    >
-                      {menuItem.label}
-                    </a>
-                    <div className="dropdown-menu rounded-0 m-0">
-                      {menuItem.children.map((childItem) => (
-                        <NavLink
-                          key={childItem.id}
-                          to={childItem.Link}
-                          className="dropdown-item"
-                        >
-                          {childItem.label}
-                        </NavLink>
-                      ))}
-                    </div>
+            {MENU.map((menuItem) =>
+              menuItem.children && menuItem.children.length > 0 ? (
+                <div key={menuItem.id} className="nav-item dropdown">
+                  <button
+                    className="nav-link dropdown-toggle btn"
+                    onClick={() => toggleDropdown(menuItem.id)}
+                  >
+                    {menuItem.label}
+                  </button>
+                  <div
+                    className={`dropdown-menu rounded-0 m-0 ${
+                      openDropdown === menuItem.id ? "show" : ""
+                    }`}
+                  >
+                    {menuItem.children.map((childItem) => (
+                      <NavLink
+                        key={childItem.id}
+                        to={childItem.link}
+                        className="dropdown-item"
+                      >
+                        {childItem.label}
+                      </NavLink>
+                    ))}
                   </div>
-                );
-              }
-              return (
+                </div>
+              ) : (
                 <NavLink
                   key={menuItem.id}
                   to={menuItem.link || "/"}
@@ -65,8 +84,8 @@ const Navbar = () => {
                 >
                   {menuItem.label}
                 </NavLink>
-              );
-            })}
+              )
+            )}
           </div>
           <button className="btn btn-primary px-3 d-none d-lg-flex">
             Add Property
