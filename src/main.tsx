@@ -4,6 +4,7 @@ import App from "./App.tsx";
 import "swiper/css";
 import "swiper/css/navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import "animate.css";
 import "./styles/custom.css";
 import "./index.css";

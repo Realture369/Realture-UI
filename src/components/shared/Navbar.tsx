@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MENU } from "../../data/menu";
-import iconDealImg from "../../img/icon-deal.png";
+import realtureLogo from "../../assets/relature-logo.jpeg";
 import { Link, NavLink } from "react-router-dom";
 import useSticyNavbar from "../../hooks/useSticyNavbar";
 
@@ -32,9 +32,9 @@ const Navbar: React.FC = () => {
           <div className="icon p-2 me-2">
             <img
               className="img-fluid"
-              src={iconDealImg}
+              src={realtureLogo}
               alt="Icon"
-              style={{ width: "30px", height: "30px" }}
+              style={{ width: "30px", height: "32px" }}
             />
           </div>
           <h1 className="m-0 text-primary">Realture</h1>

@@ -445,3 +445,11 @@
   padding: 15px;
   border-radius: 50%;
 }
+
+/* Form */
+.label-font {
+  font-size: 17px;
+  font-family: "poppins", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}

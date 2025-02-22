@@ -10,8 +10,6 @@ import AdvertiseSection from "../components/About/AdvertiseSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 
-// Import Swiper styles
-
 const Home = () => {
   return (
     <>
@@ -38,11 +36,11 @@ const Home = () => {
           <div className="col-md-6 animated fadeIn">
             <Swiper
               className="owl-carousel header-carousel"
-              modules={[Navigation, Autoplay]} // Replaces loop and autoplay
-              autoplay={{ delay: 3000, disableOnInteraction: false }} // Replaces autoplay
-              speed={1500} // Replaces smartSpeed
-              loop={true} // Replaces loop
-              pagination={{ clickable: true }} // Replaces dots
+              modules={[Navigation, Autoplay]}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
+              speed={1500}
+              loop={true}
+              pagination={{ clickable: true }}
             >
               <SwiperSlide className="owl-carousel-item">
                 <img className="img-fluid" src={carouselFirstImg} alt="" />

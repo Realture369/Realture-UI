@@ -10,6 +10,8 @@ import PropertyList from "./pages/PropertyList";
 import PropertyType from "./pages/PropertyType";
 import PropertyAgents from "./pages/PropertyAgents";
 import BackToTopButton from "./components/shared/BackToTopButton";
+import Signin from "./pages/Signin";
+import Signup from "./pages/Signup";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/sign-in" element={<Signin />} />
+          <Route path="/sign-up" element={<Signup />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
