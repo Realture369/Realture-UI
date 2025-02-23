@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@esbuild/darwin-x64": "^0.25.0",
     "@rollup/plugin-inject": "^5.0.5",
     "animate.css": "^3.7.2",
     "bootstrap": "5.0",
@@ -26,6 +25,7 @@
     "swiper": "^11.2.4"
   },
   "devDependencies": {
+    "@esbuild/darwin-x64": "^0.25.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
