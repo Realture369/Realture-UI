@@ -10,8 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@esbuild/darwin-x64": "^0.25.0",
-    "esbuild": "^0.25.0",
     "@rollup/plugin-inject": "^5.0.5",
     "animate.css": "^3.7.2",
     "bootstrap": "5.0",
@@ -37,5 +35,9 @@
     "eslint-plugin-react-refresh": "^0.4.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
+  },
+  "optionalDependencies": {
+    "esbuild": "^0.25.0",
+    "@esbuild/darwin-x64": "0.25.0"
   }
 }
