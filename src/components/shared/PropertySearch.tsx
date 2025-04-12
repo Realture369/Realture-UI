@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { FC, useState } from "react";
 
 const PROPERTY_TYPES = [
   { id: 1, value: "apartment", label: "Apartment" },
@@ -60,7 +60,7 @@ const LOCATIONS = [
   { id: 23, value: "velachery", label: "Velachery" },
 ];
 
-const PropertySearch = () => {
+const PropertySearch: FC = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [location, setLocation] = useState("");

@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import aboutImg from "../../img/about.jpg";
+import { FC } from "react";
 
-const AdvertiseSection = () => {
+const AdvertiseSection: FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">

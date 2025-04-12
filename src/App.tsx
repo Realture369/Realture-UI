@@ -12,8 +12,9 @@ import PropertyAgents from "./pages/PropertyAgents";
 import BackToTopButton from "./components/shared/BackToTopButton";
 import Signin from "./pages/Signin";
 import Signup from "./pages/Signup";
+import { FC } from "react";
 
-const App = () => {
+const App: FC = () => {
   return (
     <div className="container-xxl bg-white p-0">
       <BrowserRouter

@@ -2,8 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import { TESTIMONIALS } from "../../data/testimonials";
 import Testimonial from "./Testimonial";
+import { FC } from "react";
 
-const ClientsSection = () => {
+const ClientsSection: FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">

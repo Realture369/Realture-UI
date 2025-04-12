@@ -5,8 +5,9 @@ import propertyThreeImg from "../../img/property-3.jpg";
 import propertyFourImg from "../../img/property-4.jpg";
 import propertyFiveImg from "../../img/property-5.jpg";
 import propertySixImg from "../../img/property-6.jpg";
+import { FC } from "react";
 
-const Footer = () => {
+const Footer: FC = () => {
   return (
     <div
       className="container-fluid bg-dark text-white-50 footer pt-5 mt-5 wow fadeIn"

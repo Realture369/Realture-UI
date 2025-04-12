@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const Signin = () => {
+const Signin: FC = () => {
   const [passwordVisibility, setPasswordVisibility] = useState(false);
   const [username, setUserName] = useState("");
   const [password, setPassword] = useState("");

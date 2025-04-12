@@ -9,8 +9,9 @@ import ClientsSection from "../components/Testimonials/ClientsSection";
 import AdvertiseSection from "../components/About/AdvertiseSection";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
+import { FC } from "react";
 
-const Home = () => {
+const Home: FC = () => {
   return (
     <>
       <div className="container-fluid header bg-white p-0">

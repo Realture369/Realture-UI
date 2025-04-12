@@ -1,8 +1,9 @@
 import HeaderSection from "../components/shared/HeaderSection";
 import PropertySearch from "../components/shared/PropertySearch";
 import ContactForm from "../components/ContactUs/ContactForm";
+import { FC } from "react";
 
-const Contact = () => {
+const Contact: FC = () => {
   return (
     <>
       <HeaderSection heading="Contact Us" />

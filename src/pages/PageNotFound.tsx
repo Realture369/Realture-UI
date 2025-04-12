@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import HeaderSection from "../components/shared/HeaderSection";
 import PropertySearch from "../components/shared/PropertySearch";
+import { FC } from "react";
 
-const PageNotFound = () => {
+const PageNotFound: FC = () => {
   return (
     <>
       <HeaderSection heading="404 Error" />

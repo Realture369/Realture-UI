@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { FC, useState } from "react";
 
 enum UserRoles {
   ADMIN = "admin",
@@ -18,7 +18,7 @@ interface SignUpDetail {
   userRole: UserRole;
 }
 
-const Signup = () => {
+const Signup: FC = () => {
   const [userDetails, setUserDetails] = useState<SignUpDetail>({
     fullName: "",
     emailAddress: "",

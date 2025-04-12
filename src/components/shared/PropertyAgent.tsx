@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 interface Agent {
   id: number;
   img: string;
@@ -9,7 +11,7 @@ interface Props {
   agent: Agent;
 }
 
-const PropertyAgent = ({ agent }: Props) => {
+const PropertyAgent: FC<Props> = ({ agent }) => {
   return (
     <div
       key={agent.id}

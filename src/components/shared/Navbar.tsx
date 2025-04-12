@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { MENU } from "../../data/menu";
 import realtureLogo from "../../assets/relature-logo.jpeg";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import useSticyNavbar from "../../hooks/useSticyNavbar";
 
 const Navbar: React.FC = () => {
@@ -11,6 +11,7 @@ const Navbar: React.FC = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   // State to track open dropdowns
   const [openDropdown, setOpenDropdown] = useState<number | null>(null);
+  const navigate = useNavigate();
 
   // Toggle the mobile navbar
   const toggleNavbar = () => {
@@ -20,6 +21,10 @@ const Navbar: React.FC = () => {
   // Toggle dropdown menus
   const toggleDropdown = (id: number) => {
     setOpenDropdown(openDropdown === id ? null : id);
+  };
+
+  const navigateToAddProperty = () => {
+    navigate("/add-property");
   };
 
   return (
@@ -89,7 +94,10 @@ const Navbar: React.FC = () => {
               )
             )}
           </div>
-          <button className="btn btn-primary px-3 d-none d-lg-flex">
+          <button
+            onClick={navigateToAddProperty}
+            className="btn btn-primary px-3 d-none d-lg-flex"
+          >
             Add Property
           </button>
         </div>

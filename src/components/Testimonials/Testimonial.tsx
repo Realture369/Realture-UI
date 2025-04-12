@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 interface Testimonial {
   id?: number;
   name: string;
@@ -10,7 +12,7 @@ interface Props {
   testimonial: Testimonial;
 }
 
-const Testimonial = ({ testimonial }: Props) => {
+const Testimonial: FC<Props> = ({ testimonial }) => {
   return (
     <div className="testimonial-item bg-light rounded p-3">
       <div className="bg-white border rounded p-4">

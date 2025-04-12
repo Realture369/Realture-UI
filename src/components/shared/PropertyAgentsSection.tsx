@@ -1,6 +1,7 @@
+import { FC } from "react";
 import { AGENTS } from "../../data/property-agents";
 
-const PropertyAgentsSection = () => {
+const PropertyAgentsSection: FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">

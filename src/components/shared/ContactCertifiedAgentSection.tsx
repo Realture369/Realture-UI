@@ -1,6 +1,7 @@
+import { FC } from "react";
 import callToActionImg from "../../img/call-to-action.jpg";
 
-const ContactCertifiedAgentSection = () => {
+const ContactCertifiedAgentSection: FC = () => {
   return (
     <div className="container-xxl py-5">
       <div className="container">

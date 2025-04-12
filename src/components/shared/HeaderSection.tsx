@@ -1,10 +1,11 @@
+import { FC } from "react";
 import HeaderImg from "../../img/header.jpg";
 
 interface Props {
   heading: string;
 }
 
-const HeaderSection = ({ heading }: Props) => {
+const HeaderSection: FC<Props> = ({ heading }) => {
   return (
     <div className="container-fluid header bg-white p-0">
       <div className="row g-0 align-items-center flex-column-reverse flex-md-row">

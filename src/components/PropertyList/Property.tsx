@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 interface Property {
   id: number;
   img: string;
@@ -15,7 +17,7 @@ interface Props {
   property: Property;
 }
 
-const Property = ({ property }: Props) => {
+const Property: FC<Props> = ({ property }) => {
   const status = property.isForSale ? "For Sell" : "For Rent";
 
   return (

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 
-const ContactForm = () => {
+const ContactForm: FC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");

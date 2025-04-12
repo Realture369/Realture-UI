@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import Property from "./Property";
 import { PROPERTIES } from "../../data/properties";
 
@@ -26,7 +26,7 @@ const FILTERS = [
   },
 ];
 
-const PropertyListingSection = () => {
+const PropertyListingSection: FC = () => {
   const [selectedTab, setSelectedTab] = useState<TabHeading | null>(FILTERS[0]);
 
   const handleSelect = (selectedItem: TabHeading) => {

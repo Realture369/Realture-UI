@@ -1,4 +1,6 @@
-const Spinner = () => {
+import { FC } from "react";
+
+const Spinner: FC = () => {
   return (
     <div
       id="spinner"
